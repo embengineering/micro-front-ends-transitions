@@ -1,0 +1,16 @@
+{
+	"modules": {
+		"angular-app": {
+			"manifest": "microfrontend1/manifest.json"
+		},
+		"react-app-old": {
+			"manifest": "microfrontend2/manifest.json"
+		},
+		"react-app": {
+			"manifest": "microfrontend3/manifest.json"
+		},
+		"react-app-2": {
+			"manifest": "microfrontend3/manifest.json"
+		}
+	}
+}

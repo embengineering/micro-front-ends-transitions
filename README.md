@@ -1,5 +1,5 @@
 ### Description
-The purpose of this repo is to demonstrate an example of the automation for the integration of micro front-ends using a manifest custom built.
+The purpose of this repo is to demonstrate different micro front-ends solutions at the same time and transition between them using static pages.
 
 ### How to run locally
 

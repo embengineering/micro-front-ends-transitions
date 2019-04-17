@@ -33,11 +33,11 @@ const handleSucess = (location, moduleName, { data: manifest }) => {
 const handleLoadManifestSucess = ({ data: manifest }) => {
     console.log('Manifest configuration loaded:', manifest);
 
-    const modules = Object.getOwnPropertyNames(manifest.modules);
+    const modules = Object.getOwnPropertyNames(manifest);
 
     modules.forEach(moduleName => {
-        if(manifest.modules[moduleName] && manifest.modules[moduleName].manifest) {
-            loadModuleManifest(manifest.modules[moduleName].manifest, moduleName);
+        if(manifest[moduleName] && manifest[moduleName].manifest) {
+            loadModuleManifest(manifest[moduleName].manifest, moduleName);
         }
     });
 };

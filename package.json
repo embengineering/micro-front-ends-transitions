@@ -15,7 +15,7 @@
     "build:microfrontend2": "cd microfrontend2 && yarn build",
     "build:microfrontend3": "cd microfrontend3 && yarn build",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",

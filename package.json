@@ -1,13 +1,19 @@
 {
   "name": "web-component",
   "version": "1.0.0",
-  "description": "",
+  "description": "Three micro frontends built with different technologies (React v15, React v0.14, and Angular)",
   "main": "index.js",
   "scripts": {
     "clean:dist": "rimraf dist",
-    "start": "webpack-dev-server --env.development --progress --open",
+    "start": "run-s clean:dist build:microfrontends start:dev",
+    "start:dev": "webpack-dev-server --env.development --progress --open",
     "start:dist": "node server.js",
-    "build": "webpack --env.production",
+    "build": "run-s clean:dist build:prod build:microfrontends",
+    "build:prod": "webpack --env.production",
+    "build:microfrontends": "run-p build:microfrontend1 build:microfrontend2 build:microfrontend3",
+    "build:microfrontend1": "cd microfrontend1 && yarn build",
+    "build:microfrontend2": "cd microfrontend2 && yarn build",
+    "build:microfrontend3": "cd microfrontend3 && yarn build",
     "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

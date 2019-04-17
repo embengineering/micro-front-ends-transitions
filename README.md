@@ -5,7 +5,7 @@
 * The web components example use HTML imports to load the micro frontends from a remote location
 * The lazy loading example imports the micro frontends using a manifest.json created during the build process
 * The main application is automatically rendered when the main script loads
-* Bootstrap is loaded for stylnig using a CDN
+* Bootstrap is loaded for styling using a CDN
 * Only the web components example loads additional polyfills using CDNs
 * Each micro frontend will update a reference to a centralized manifest during its build process
 
